@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PEDIDO>
+    <Destinatario>Juan Delgado Martínez</Destinatario>
+    <Articulo>bicicleta A2023</Articulo>
+    <Direccion>calle Barco 4, tercer piso, letra A</Direccion>
+    <Fecha>2000-05-19</Fecha>
+</PEDIDO>
+
+<!-- Arriba XML   Abajo XSD-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="PEDIDO">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Destinatario" type="xs:string"/>
+                <xs:element name="Articulo" type="xs:string"/>
+                <xs:element name="Direccion" type="xs:string"/>
+                <xs:element name="Fecha" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

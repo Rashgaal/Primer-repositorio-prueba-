@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<InformacionEstudiante>
+    <ciudad>Roma</ciudad>
+    <fecha_de_nacimiento>1996-12-18</fecha_de_nacimiento>
+    <hora>18:29:45</hora>
+    <nota>7.5</nota>
+    <apto>true</apto>
+    <asignatura>Lenguaje de Marcas</asignatura>
+    <profesor>Alberto</profesor>
+    <curso>1º DAW</curso>
+    <impagado>false</impagado>
+    <ingresos>3000.00</ingresos>
+    <edad>33</edad>
+    <tutor>Paco</tutor>
+</InformacionEstudiante>
+
+
+<!-- Arriba XML    Abajo XSD-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="InformacionEstudiante">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ciudad" type="xs:string"/>
+                <xs:element name="fecha_de_nacimiento" type="xs:date"/>
+                <xs:element name="hora" type="xs:time"/>
+                <xs:element name="nota" type="xs:decimal"/>
+                <xs:element name="apto" type="xs:boolean"/>
+                <xs:element name="asignatura" type="xs:string"/>
+                <xs:element name="profesor" type="xs:string"/>
+                <xs:element name="curso" type="xs:string"/>
+                <xs:element name="impagado" type="xs:boolean"/>
+                <xs:element name="ingresos" type="xs:decimal"/>
+                <xs:element name="edad" type="xs:integer"/>
+                <xs:element name="tutor" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

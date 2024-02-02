@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Titulo" type="xs:string"/>
+                <xs:element name="Autor" type="xs:string"/>
+                <xs:element name="Publicacion" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!-- Arriba XSD   Abajo XML-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Libro>
+    <Titulo>Harry Potter y la Piedra Filosofal</Titulo>
+    <Autor>J.K. Rowling</Autor>
+    <Publicacion>1997</Publicacion>
+</Libro>

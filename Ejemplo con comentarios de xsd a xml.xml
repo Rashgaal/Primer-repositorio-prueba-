@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- definimos el nombre del elemento -->
+    <xs:element name="Documento">
+        <!-- complextype con eso le decimos que vamos a utilizar mas elementos -->
+        <xs:complexType>
+            <!-- definimos el orden en el que van los elementos-->
+            <xs:sequence>
+                <!-- Se especifica que el DNI no puede tener más de 12 caracteres directamente en el elemento Numero -->
+                <xs:element name="Numero">
+                    <!-- definimos el tipo de datos que es simple -->
+                    <xs:simpleType>
+                        <!-- definimos la restricción -->
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="12"/>
+                        </xs:restriction>
+                        <!-- cerramos la restriccion -->
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+
+
+<!-- Arriba XSD    Abajo XML-->
+
+
+<Documento xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nombre_de_tu_esquema.xsd">
+    <Numero>123456789012</Numero>
+</Documento>

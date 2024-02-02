@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Cliente>
+    <Ciudad>Roma</Ciudad>
+    <Fecha-de-nacimiento>1996-12-18</Fecha-de-nacimiento>
+    <Hora>18:28:45</Hora>
+    <Nota>7.5</Nota>
+    <Apto>true</Apto>
+</Cliente>
+
+
+<!-- Arriba XML   Abajo XSD-->
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Cliente">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Ciudad" type="xs:string"/>
+                <xs:element name="Fecha-de-nacimiento" type="xs:date"/>
+                <xs:element name="Hora" type="xs:time"/>
+                <xs:element name="Nota" type="xs:decimal"/>
+                <xs:element name="Apto" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
